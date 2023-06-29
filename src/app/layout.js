@@ -1,3 +1,4 @@
+
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Flowbite } from '../lib/flowbite';
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
 
                <SideBar></SideBar>
 
-               <div class="p-4 rounded-lg dark:border-gray-700 mt-14">
+               <div class="p-4 sm:ml-64 rounded-lg dark:border-gray-700 mt-14">
                   {children}
                </div>
 

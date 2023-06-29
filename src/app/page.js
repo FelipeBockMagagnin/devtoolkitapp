@@ -5,7 +5,6 @@ import Script from 'next/script'
 export default function Home() {
   return (
     <div>
-
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-SFFSZM7F21" />
       <Script id="google-analytics">
         {`
@@ -28,3 +27,4 @@ export default function Home() {
     </div>
   )
 }
+
