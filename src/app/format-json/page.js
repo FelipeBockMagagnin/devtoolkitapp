@@ -32,7 +32,7 @@ export default function Page() {
 
     return (
         <>
-            <Title>JSON Minifier</Title>
+            <Title>JSON Formatter</Title>
 
             <div  class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
