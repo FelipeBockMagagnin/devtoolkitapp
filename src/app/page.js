@@ -13,7 +13,7 @@ export default function Home() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'GA_MEASUREMENT_ID');
+          gtag('config', 'G-SFFSZM7F21');
         `}
       </Script>
       <Title><div className="text-center">Dev Toolkit</div></Title>
