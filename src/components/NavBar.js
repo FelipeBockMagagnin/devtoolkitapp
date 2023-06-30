@@ -1,7 +1,18 @@
+'use client'
+
 import Link from 'next/link';
 import { DarkThemeToggle } from '../lib/flowbite';
+import ReactGA from 'react-ga4';
+import { useEffect } from 'react';
 
 export default function NavBar() {
+
+  useEffect(() => {
+    console.log(window.location.pathname + window.location.search)
+    ReactGA.initialize('G-SFFSZM7F21');
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: window.location.pathname + window.location.search });
+  }, [])
+
   return (
     <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">      
         <div class="px-3 py-3 lg:px-5 lg:pl-3">

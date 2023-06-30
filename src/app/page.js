@@ -7,16 +7,6 @@ import menus from '../data/menus'
 export default function Home() {
   return (
     <div>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-SFFSZM7F21" />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-SFFSZM7F21');
-        `}
-      </Script>
       <Title><div className="text-center">Dev Toolkit</div></Title>
 
       <div className="mb-2 text-center text-gray-500 dark:text-gray-400">
