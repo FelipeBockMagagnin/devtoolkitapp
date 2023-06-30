@@ -18,6 +18,11 @@ export default function SideBar() {
             name: 'JSON Formatter',
             icon: LuFileJson,
             link: '/format-json'
+        },
+        {
+            name: 'Lorem Ipsum',
+            icon: LuFileJson,
+            link: '/lorem-ipsum'
         }
     ]
 
