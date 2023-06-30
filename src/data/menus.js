@@ -2,6 +2,11 @@ import { LuFileJson } from 'react-icons/lu';
 
 const menus = [
     {
+        name: 'Javascript Minifier',
+        icon: LuFileJson,
+        link: '/minify-js'
+    },
+    {
         name: 'JSON Minifier',
         icon: LuFileJson,
         link: '/minify-json'
