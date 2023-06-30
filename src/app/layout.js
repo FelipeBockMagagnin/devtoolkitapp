@@ -8,7 +8,7 @@ import NavBar from '@/components/NavBar';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-   title: 'Dev Tollkit',
+   title: 'Dev Toolkit',
    description: 'Every tool you need in one place',
 }
 
