@@ -8,8 +8,7 @@ export default function Page() {
     const [paragraphs, setParagraphs] = useState(1)
     const [words, setWords] = useState(1)
 
-
-    function generate() {
+    function generate(_words, _paragraphs) {
         var loremText = '';
         var wordsList = [
             'Lorem',
@@ -83,10 +82,9 @@ export default function Page() {
             'laborum',
         ];
 
-
-        for (var i = 0; i < paragraphs; i++) {
+        for (var i = 0; i < _paragraphs; i++) {
             var paragraph = '';
-            for (var j = 0; j < words; j++) {
+            for (var j = 0; j < _words; j++) {
                 var randomWord = wordsList[Math.floor(Math.random() * wordsList.length)];
 
                 if(j == 0 || paragraph.substring(paragraph.length - 2).includes('.')){
@@ -113,12 +111,12 @@ export default function Page() {
             <div class='flex'>
                 <div className="m-2">
                     <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Paragraphs - {paragraphs}</label>
-                    <input id="minmax-range" type="range" onChange={(e) => {setParagraphs(e.target.value); generate();}} min="1" max="20" value={paragraphs} class="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
+                    <input id="minmax-range" type="range" onChange={(e) => {setParagraphs(e.target.value); generate(words, e.target.value);}} min="1" max="20" value={paragraphs} class="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
                 </div>
 
                 <div className="m-2">
                     <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Words - {words}</label>
-                    <input id="minmax-range" type="range" onChange={(e) => {setWords(e.target.value); generate();}} min="1" max="100" value={words} class="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
+                    <input id="minmax-range" type="range" onChange={(e) => {setWords(e.target.value); generate(e.target.value, paragraphs);}} min="1" max="100" value={words} class="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
                 </div>
             </div>
 
