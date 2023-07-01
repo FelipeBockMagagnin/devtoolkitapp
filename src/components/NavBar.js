@@ -8,9 +8,12 @@ import { useEffect } from 'react';
 export default function NavBar() {
 
   useEffect(() => {
-    console.log(window.location.pathname + window.location.search)
-    ReactGA.initialize('G-SFFSZM7F21');
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: window.location.pathname + window.location.search });
+    const env = process.env.NODE_ENV
+    if (env == "production"){
+      console.log(window.location.pathname + window.location.search)
+      ReactGA.initialize('G-SFFSZM7F21');
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: window.location.pathname + window.location.search });
+    }    
   }, [])
 
   return (
