@@ -10,9 +10,8 @@ export default function NavBar() {
   useEffect(() => {
     const env = process.env.NODE_ENV
     if (env == "production"){
-      console.log(window.location.pathname + window.location.search)
       ReactGA.initialize('G-SFFSZM7F21');
-      ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: window.location.pathname + window.location.search });
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: document.title });
     }    
   }, [])
 

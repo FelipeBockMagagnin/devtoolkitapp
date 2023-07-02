@@ -3,11 +3,6 @@ import Title from "@/components/Title"
 import Script from 'next/script'
 import menus from '../data/menus'
 
-export const metadata = {
-  title: 'DevToolkit',
-  description: 'Enhance your coding workflow with a vast array of online developer tools. From code minification and validation to JSON parsing and HTML/CSS optimization.',
-}
-
 export default function Home() {
   return (
     <div>
