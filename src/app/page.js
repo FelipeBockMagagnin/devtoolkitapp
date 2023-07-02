@@ -44,7 +44,7 @@ export default function Home() {
         Supercharge your development workflow with our extensive collection of online developer tools. 
         From code minification and validation to JSON parsing and HTML/CSS optimization, our platform offers a 
         comprehensive suite of tools to streamline your coding tasks. Boost productivity, ensure code quality, 
-        and save valuable time with our user-friendly interface and powerful features. Whether you're a front-end developer, 
+        and save valuable time with our user-friendly interface and powerful features. Whether you are a front-end developer, 
         back-end engineer, or a coding enthusiast, our platform provides the essential tools you need for efficient and seamless development. 
         Discover the ultimate resource for online developer tools and take your coding prowess to the next level.
       </div>  
