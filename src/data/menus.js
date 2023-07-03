@@ -1,4 +1,4 @@
-import { FiFileText, FiFile, FiImage } from 'react-icons/fi';
+import { FiFileText, FiFile, FiImage, FiLock } from 'react-icons/fi';
 
 const menus = [
     {
@@ -25,6 +25,11 @@ const menus = [
         name: 'Placeholder Generator',
         icon: FiImage,
         link: '/placeholder-image-generator'
+    },
+    {
+        name: 'Password Strength',
+        icon: FiLock,
+        link: '/password-strength-checker'
     }
 ]
 
