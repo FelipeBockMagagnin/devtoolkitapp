@@ -30,6 +30,11 @@ const menus = [
         name: 'Password Strength',
         icon: FiLock,
         link: '/password-strength-checker'
+    },
+    {
+        name: 'Image to Base64',
+        icon: FiImage,
+        link: '/image-to-base64'
     }
 ]
 
