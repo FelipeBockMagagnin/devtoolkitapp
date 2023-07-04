@@ -1,4 +1,8 @@
-import { FiFileText, FiFile, FiImage, FiLock } from 'react-icons/fi';
+import { FiFileText, FiFile, FiImage, FiLock, FiRepeat} from 'react-icons/fi';
+import { LuFileJson } from 'react-icons/lu';
+import { FaExchangeAlt } from 'react-icons/fa';
+
+
 
 const menus = [
     {
@@ -8,12 +12,12 @@ const menus = [
     },
     {
         name: 'JSON Minifier',
-        icon: FiFile,
+        icon: LuFileJson,
         link: '/minify-json'
     },
     {
         name: 'JSON Formatter',
-        icon: FiFile,
+        icon: LuFileJson,
         link: '/format-json'
     },
     {
@@ -35,6 +39,16 @@ const menus = [
         name: 'Image to Base64',
         icon: FiImage,
         link: '/image-to-base64'
+    },
+    {
+        name: 'XML to JSON',
+        icon: FiRepeat,
+        link: '/xml-to-json'
+    },
+    {
+        name: 'JSON to XML',
+        icon: FiRepeat,
+        link: '/json-to-xml'
     }
 ]
 
