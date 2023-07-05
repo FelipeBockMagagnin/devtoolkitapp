@@ -20,14 +20,13 @@ export default function Home() {
       <div className="flex justify-center flex-wrap">
         {menus.map((menu, index) => {
           return (
-            <a key={index} href={menu.link} class="flex rounded-xl bg-white p-2 px-4 m-2 border hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-              {<menu.icon class="mt-1 h-8 w-8 text-indigo-400  group-hover:text-gray-900 dark:group-hover:text-white"></menu.icon>}
-              <div class="ml-2">
-                <h5 class="font-bold tracking-tight text-gray-900 dark:text-white">{menu.name}</h5>
-                <p class="mt-0 font-normal text-sm text-gray-700 dark:text-gray-400">{menu.description}</p>
+            <a key={index} href={menu.link} className="flex rounded-xl bg-white p-2 px-4 m-2 border w-full md:w-auto hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              {<menu.icon className="mt-1 h-8 w-8 text-indigo-400  group-hover:text-gray-900 dark:group-hover:text-white"></menu.icon>}
+              <div className="ml-2">
+                <h5 className="font-bold tracking-tight text-gray-900 dark:text-white">{menu.name}</h5>
+                <p className="mt-0 font-normal text-sm text-gray-700 dark:text-gray-400">{menu.description}</p>
               </div>
             </a>
-
           )
         })}
       </div>

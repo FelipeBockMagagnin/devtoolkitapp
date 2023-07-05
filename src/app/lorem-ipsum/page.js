@@ -108,19 +108,19 @@ export default function Page() {
         <>
             <Title>Lorem Ipsum Generator</Title>
 
-            <div class='flex'>
+            <div className='flex'>
                 <div className="m-2">
-                    <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Paragraphs - {paragraphs}</label>
-                    <input id="minmax-range" type="range" onChange={(e) => {setParagraphs(e.target.value); generate(words, e.target.value);}} min="1" max="20" value={paragraphs} class="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
+                    <label htmlFor="minmax-range" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Paragraphs - {paragraphs}</label>
+                    <input id="minmax-range" type="range" onChange={(e) => {setParagraphs(e.target.value); generate(words, e.target.value);}} min="1" max="20" value={paragraphs} className="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
                 </div>
 
                 <div className="m-2">
-                    <label for="minmax-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Words - {words}</label>
-                    <input id="minmax-range" type="range" onChange={(e) => {setWords(e.target.value); generate(e.target.value, paragraphs);}} min="1" max="100" value={words} class="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
+                    <label htmlFor="minmax-range" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Words - {words}</label>
+                    <input id="minmax-range" type="range" onChange={(e) => {setWords(e.target.value); generate(e.target.value, paragraphs);}} min="1" max="100" value={words} className="w-full md:w-52 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-11" />
                 </div>
             </div>
 
-            <div class="grid gap-6 mb-6 md:w-2/4" dangerouslySetInnerHTML={{__html: loremIpsumText}}></div>
+            <div className="grid gap-6 mb-6 md:w-2/4" dangerouslySetInnerHTML={{__html: loremIpsumText}}></div>
         </>
     )
 }

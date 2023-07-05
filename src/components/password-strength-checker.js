@@ -20,23 +20,23 @@ export default function PasswordStrengthChecker() {
 
     return (
         <>
-            <Title><div class='text-center'>Password Strength Checker</div></Title>
+            <Title><div className='text-center'>Password Strength Checker</div></Title>
 
-            <div class="md:w-2/4 text-center m-auto">
+            <div className="md:w-2/4 text-center m-auto">
                 <div>
-                    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                    <input value={password} onChange={(e) => { test(e.target.value); setPassword(e.target.value) }} type="password" id="first_name" class="w-full md:w-2/4 m-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                    <input value={password} onChange={(e) => { test(e.target.value); setPassword(e.target.value) }} type="password" id="first_name" className="w-full md:w-2/4 m-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
 
-                <div class="mt-2 block text-sm font-medium text-gray-900 dark:text-white">
+                <div className="mt-2 block text-sm font-medium text-gray-900 dark:text-white">
                     Time to crack your password:
                 </div>
 
-                <div class="block text-sm font-medium text-gray-900 dark:text-white">
+                <div className="block text-sm font-medium text-gray-900 dark:text-white">
                     {time}
                 </div>
 
-                {time != 0 ? <div class={"block text-2xl font-bold " + getClassNames(seconds)}>
+                {time != 0 ? <div className={"block text-2xl font-bold " + getClassNames(seconds)}>
                     {getStrongValue(seconds)}
                 </div> : ''}
             </div>
