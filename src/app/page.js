@@ -18,36 +18,24 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center flex-wrap">
-            {menus.map((menu, index) => {
-              return (
-                <div key={index}>
-                  <a href={menu.link} class="flex border m-2 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                    {<menu.icon class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></menu.icon>}
-                    <span class="ml-1">{menu.name}</span>
-                  </a>
-                </div>
-              )
-            })}
+        {menus.map((menu, index) => {
+          return (
+            <a key={index} href={menu.link} class="flex rounded-xl bg-white p-2 px-4 m-2 border hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              {<menu.icon class="mt-1 h-8 w-8 text-indigo-400  group-hover:text-gray-900 dark:group-hover:text-white"></menu.icon>}
+              <div class="ml-2">
+                <h5 class="font-bold tracking-tight text-gray-900 dark:text-white">{menu.name}</h5>
+                <p class="mt-0 font-normal text-sm text-gray-700 dark:text-gray-400">{menu.description}</p>
+              </div>
+            </a>
+
+          )
+        })}
       </div>
-      
+
 
       <div className="mb-6 mt-4 text-center text-gray-500 dark:text-gray-400">
         More tools available soon!
-      </div>      
-
-
-      <div className="text-lg mt-4 text-center dark:text-white">
-        About DevToolkit:
       </div>
-
-      <div className="text-center text-gray-500 dark:text-gray-400 md:w-2/4 m-auto">
-        Supercharge your development workflow with our extensive collection of online developer tools. 
-        From code minification and validation to JSON parsing and HTML/CSS optimization, our platform offers a 
-        comprehensive suite of tools to streamline your coding tasks. Boost productivity, ensure code quality, 
-        and save valuable time with our user-friendly interface and powerful features. Whether you are a front-end developer, 
-        back-end engineer, or a coding enthusiast, our platform provides the essential tools you need for efficient and seamless development. 
-        Discover the ultimate resource for online developer tools and take your coding prowess to the next level.
-      </div>  
     </div>
   )
 }
