@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.devtoolkitapp.com/</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/minify-js</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/minify-json</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/format-json</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/lorem-ipsum</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/placeholder-image-generator</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/password-strength-checker</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/image-to-base64</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/xml-to-json</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
     </url>
     <url>
         <loc>https://www.devtoolkitapp.com/json-to-xml</loc>
-        <lastmod>2023-10-03</lastmod>
+        <lastmod>2024-01-21</lastmod>
+    </url>
+    <url>
+        <loc>https://www.devtoolkitapp.com/url-parser</loc>
+        <lastmod>2024-01-21</lastmod>
     </url>
 </urlset>

@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Faq({menus}) {
+export default function Faq({menus, className}) {
     return (
-        <div id="accordion-collapse" data-accordion="collapse">
+        <div className={className} id="accordion-collapse" data-accordion="collapse">
             {menus.map((menu, index) => {
                 return (
                     <div key={index}>

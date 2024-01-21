@@ -1,4 +1,4 @@
-import { FiFileText, FiFile, FiImage, FiLock, FiRepeat} from 'react-icons/fi';
+import { FiFileText, FiFile, FiImage, FiLock, FiRepeat, FiLink} from 'react-icons/fi';
 import { LuFileJson } from 'react-icons/lu';
 import { FaExchangeAlt } from 'react-icons/fa';
 
@@ -58,6 +58,12 @@ const menus = [
         icon: FiRepeat,
         description: 'Convert JSON to XML',
         link: '/json-to-xml'
+    },
+    {
+        name: 'URL Parser',
+        icon: FiLink,
+        description: 'Parse a URL into components',
+        link: '/url-parser'
     }
 ]
 
