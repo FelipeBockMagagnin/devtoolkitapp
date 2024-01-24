@@ -101,7 +101,7 @@ export default function PlaceholderImageGenerator() {
                 <span className=" text-4xl tracking-tight font-extrabold text-gray-800 mb-2">About Placeholder Image Generator</span>
                 <br/>
                 <span>
-                    Your go-to free online tool to effortlessly create placeholders. Tailor images to your needs with custom sizes for web and app design. Just set your specifications, click 'Generate' and download your dynamic dummy image instantly. Simplify your workflow with our efficient and user-friendly Dynamic Dummy Image Generator, making design mock-ups a breeze.                
+                    Your go-to free online tool to effortlessly create placeholders. Tailor images to your needs with custom sizes for web and app design. Just set your specifications, click &apos;Generate&apos; and download your dynamic dummy image instantly. Simplify your workflow with our efficient and user-friendly Dynamic Dummy Image Generator, making design mock-ups a breeze.                
                 </span>
             </div>
 
