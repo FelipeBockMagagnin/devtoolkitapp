@@ -174,6 +174,14 @@ export default function UrlParser() {
                 </div>}
             </div>
 
+            <div className="mt-5 mb-5">
+                <span className=" text-4xl tracking-tight font-extrabold text-gray-800 mb-2">About URL Parser</span>
+                <br/>
+                <span>
+                    Simplify web addresses with our user-friendly URL Parser tool. Decode and understand complex URLs for enhanced digital efficiency.
+                </span>
+            </div>
+
             <Faq className='mt-5' menus={menus}/>
         </>
     )
