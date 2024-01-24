@@ -3,6 +3,7 @@
 import Faq from "@/components/Faq";
 import Title from "@/components/Title";
 import { useState } from "react";
+import { FiClipboard } from 'react-icons/fi';
 
 export default function MinifyJson() {
     const [jsonOutput, setJsonOutput] = useState('');
@@ -66,9 +67,28 @@ export default function MinifyJson() {
 
                 <div>
                     <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Output</label>
-                    <textarea disabled value={jsonOutput} id="message" rows="6" className="sm:h-96 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ></textarea>
+                    
+                    <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Copy to clipboard
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <textarea disabled value={jsonOutput} id="message" rows="6" className="sm:h-96 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+                        
+                    </textarea>
+                    <button data-tooltip-target="tooltip-default" type="button" onClick={() => {navigator.clipboard.writeText(jsonOutput)}} className="relative float-right bottom-7 text-white bg-blue-700 ml-2 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-2 py-1 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <FiClipboard/>
+                    </button>
                     <p className="text-xs text-red-600 dark:text-white">{jsonError}</p>
                 </div>
+            </div>
+
+
+            <div className="mt-5 mb-5">
+                <span className="text-xl font-bold">About JSON Minifier</span>
+                <br/>
+                <span>
+                    Compress JSON data swiftly with our user-friendly tool. No downloads, no fuss. Insert Json content and get your optimized file instantly. Simplify data handling for quicker sharing and efficient storage. Try it now for seamless JSON compression.
+                </span>
             </div>
 
             <Faq menus={menus}/>
