@@ -3,6 +3,7 @@
 import Title from "@/components/Title";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Faq from "@/components/Faq";
 
 export default function PlaceholderImageGenerator() {
     const [img, setImg] = useState('')
@@ -50,6 +51,29 @@ export default function PlaceholderImageGenerator() {
         a.click();
     }
 
+    const menus = [
+        {
+            title: 'What is a Placeholder Image Generator?',
+            text: 'A Placeholder Image Generator creates temporary images to fill spaces in design projects, aiding in visualizing layouts before finalizing actual graphics.'
+        },
+        {
+            title: 'How does the Generator work?',
+            text: 'Our dynamic tool generates placeholder images based on specified dimensions, offering quick and customizable solutions for design mock-ups.'
+        },
+        {
+            title: 'Can I set custom sizes for the placeholder images?',
+            text: 'Absolutely! Tailor the dimensions to your needs, ensuring a seamless fit within your design layout.'
+        },
+        {
+            title: 'Why use Placeholder Images in design projects?',
+            text: 'Placeholder images simulate real content, allowing designers to focus on layout and structure without the distraction of finalized graphics.'
+        },
+        {
+            title: 'Can I use the generated images commercially?',
+            text: 'Certainly! Our Placeholder Image Generator offers copyright-free images, making them suitable for both personal and commercial design endeavors.'
+        }
+    ]
+
     return (
         <>
             <Title>Placeholder Image Generator</Title>
@@ -74,12 +98,16 @@ export default function PlaceholderImageGenerator() {
             <Image src={img} alt='place holder image' width={widthGenerated} height={heightGenerated} />
 
             <div className="mt-5 mb-5">
-                <span className="text-xl font-bold">About Placeholder Image Generator</span>
+                <span className=" text-4xl tracking-tight font-extrabold text-gray-800 mb-2">About Placeholder Image Generator</span>
                 <br/>
                 <span>
                     Your go-to free online tool to effortlessly create placeholders. Tailor images to your needs with custom sizes for web and app design. Just set your specifications, click 'Generate' and download your dynamic dummy image instantly. Simplify your workflow with our efficient and user-friendly Dynamic Dummy Image Generator, making design mock-ups a breeze.                
                 </span>
             </div>
+
+            <Faq menus={menus}/>
         </>
     )
+
+    
 }

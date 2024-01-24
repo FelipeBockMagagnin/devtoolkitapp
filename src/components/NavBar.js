@@ -27,7 +27,7 @@ export default function NavBar() {
                   </svg>
                </button>
                <Link href='/' className="flex ml-2 md:mr-24">
-               <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
+               <span className="self-center text-xl font-extrabold text-gray-800 sm:text-2xl whitespace-nowrap dark:text-white">
                   Dev Toolkit
                 </span>
                </Link>

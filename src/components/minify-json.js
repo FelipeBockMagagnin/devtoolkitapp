@@ -16,7 +16,7 @@ export default function MinifyJson() {
         },
         {
             title: 'Why should I minify my JSON files?',
-            text: 'Minifying JSON files offers several benefits, including: <br/><br/> <b>Reduced file size:</b> Minifying removes unnecessary characters, resulting in smaller file sizes. This is particularly important for optimizing network bandwidth and improving page load times. <br/><br/> <b>Improved performance:</b> Smaller JSON files are parsed and processed faster by applications, resulting in improved performance. <br/><br/> <b>Enhanced security:</b> Minification helps to obfuscate the data in your JSON files, making it harder for unauthorized users to interpret or manipulate the information.'
+            text: 'Minifying JSON files offers several benefits, including: <br/> <b>Reduced file size:</b> Minifying removes unnecessary characters, resulting in smaller file sizes. This is particularly important for optimizing network bandwidth and improving page load times. <br/> <b>Improved performance:</b> Smaller JSON files are parsed and processed faster by applications, resulting in improved performance. <br/> <b>Enhanced security:</b> Minification helps to obfuscate the data in your JSON files, making it harder for unauthorized users to interpret or manipulate the information.'
         },
         {
             title: 'Can I minify JSON manually?',
@@ -84,7 +84,7 @@ export default function MinifyJson() {
 
 
             <div className="mt-5 mb-5">
-                <span className="text-xl font-bold">About JSON Minifier</span>
+                <span className="text-4xl font-extrabold text-gray-800">About JSON Minifier</span>
                 <br/>
                 <span>
                     Compress JSON data swiftly with our user-friendly tool. No downloads, no fuss. Insert Json content and get your optimized file instantly. Simplify data handling for quicker sharing and efficient storage. Try it now for seamless JSON compression.

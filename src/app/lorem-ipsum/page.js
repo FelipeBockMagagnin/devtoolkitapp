@@ -1,12 +1,13 @@
 'use client'
 
 import Title from "@/components/Title";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Faq from "@/components/Faq";
 
 export default function Page() {
     const [loremIpsumText, setLoremIpsumText] = useState('')
     const [paragraphs, setParagraphs] = useState(1)
-    const [words, setWords] = useState(1)
+    const [words, setWords] = useState(20)
 
     function generate(_words, _paragraphs) {
         var loremText = '';
@@ -104,6 +105,33 @@ export default function Page() {
         setLoremIpsumText(loremText);
     }
 
+    useEffect(() => {
+        generate(words, paragraphs)
+    }, [])
+    
+    const menus = [
+        {
+            title: 'What is Lorem Ipsum?',
+            text: "Lorem Ipsum is placeholder text commonly used in the design and printing industry. It's perfect for filling spaces in a layout to visualize the final appearance." 
+        },
+        {
+            title: 'Why use Lorem Ipsum in design projects?',
+            text: 'Lorem Ipsum helps mimic the look and feel of actual text, aiding designers in focusing on layout and structure without the distraction of meaningful content.'
+        },
+        {
+            title: 'How does the Lorem Ipsum Generator work?',
+            text: 'Our dynamic generator creates random Lorem Ipsum text based on your specified word and paragraph count, offering quick and customizable placeholder content.'
+        },
+        {
+            title: 'Can I use the Lorem Ipsum generated content commercially?',
+            text: "Yes, Lorem Ipsum is free to use and doesn't have any copyright restrictions, making it ideal for both personal and commercial design projects."
+        },
+        {
+            title: 'Can I choose the length of Lorem Ipsum text?',
+            text: 'Yes, our tool allows you to select the desired word and paragraph count, providing flexibility for various design needs.'
+        }
+    ]
+
     return (
         <>
             <Title>Lorem Ipsum Generator</Title>
@@ -121,6 +149,8 @@ export default function Page() {
             </div>
 
             <div className="grid gap-6 mb-6 md:w-2/4" dangerouslySetInnerHTML={{__html: loremIpsumText}}></div>
+
+            <Faq menus={menus}/>
         </>
     )
 }
