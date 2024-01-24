@@ -72,6 +72,14 @@ export default function PlaceholderImageGenerator() {
             </div>
 
             <Image src={img} alt='place holder image' width={widthGenerated} height={heightGenerated} />
+
+            <div className="mt-5 mb-5">
+                <span className="text-xl font-bold">About Placeholder Image Generator</span>
+                <br/>
+                <span>
+                    IYour go-to free online tool to effortlessly create placeholders. Tailor images to your needs with custom sizes for web and app design. Just set your specifications, click 'Generate' and download your dynamic dummy image instantly. Simplify your workflow with our efficient and user-friendly Dynamic Dummy Image Generator, making design mock-ups a breeze.                
+                </span>
+            </div>
         </>
     )
 }
