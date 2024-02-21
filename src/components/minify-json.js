@@ -20,17 +20,23 @@ export default function MinifyJson() {
         },
         {
             title: 'Can I minify JSON manually?',
-            text: 'Yes, you can manually minify JSON files by removing whitespace and comments. However, it can be a time-consuming and error-prone process. It is recommended to use a JSON minifier tool or library, which automates the minification process and ensures accurate results.'
+            text: 'Yes, you can manually adjust your JSON files by removing whitespace and comments. However, it can be a time-consuming and error-prone process. It is recommended to use a JSON minifier tool or library, which automates the minification process and ensures accurate results.'
         },
         {
             title: 'How does the JSON minifier work?',
-            text: 'JSON minifiers employ algorithms to remove unnecessary characters while preserving the structure and validity of the JSON data. They strip out comments, whitespace, line breaks, and any other non-essential characters that do not affect the data\'s integrity.'
+            text: 'It employ algorithms to remove unnecessary characters while preserving the structure and validity of the JSON data. They strip out comments, whitespace, line breaks, and any other non-essential characters that do not affect the data\'s integrity.'
         },
         {
             title: 'Are there any risks in minifying JSON files?',
             text: 'When minifying JSON files, it\'s important to note that comments are removed. If your JSON files contain important comments that document the structure or provide context, make sure to keep backups of the original files or maintain separate copies with comments intact for reference.'
         }
     ]
+
+    const jsonExemple = {
+        "name": "Test Doe",
+        "age": 12,
+        "email": "testdoe@example.com"
+    };
 
     function minify_json(e) {
         setJsonError('')
@@ -48,7 +54,6 @@ export default function MinifyJson() {
             setJsonError(err.message)
             return
         }
-       
 
         var newString = JSON.stringify(jsonObject, null, 0)
 
@@ -61,12 +66,12 @@ export default function MinifyJson() {
 
             <div  className="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Input</label>
+                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-800 dark:text-white">Input</label>
                     <textarea onChange={(event) => minify_json(event)} id="message" rows="6" className="sm:h-96 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ></textarea>
                 </div>
 
                 <div>
-                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Output</label>
+                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-800 dark:text-white">Output</label>
                     
                     <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                         Copy to clipboard
@@ -82,12 +87,27 @@ export default function MinifyJson() {
                 </div>
             </div>
 
+            <div className="mt-5 mb-5 text-gray-800">
+                <span className="text-4xl font-extrabold text-gray-800">Example of JSON code minified</span>
+
+                <div  className="grid gap-6 mb-6 md:grid-cols-2 mt-3">
+                    <div>
+                        <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-800 dark:text-white">JSON string</label>
+                        <textarea id="message" rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >{JSON.stringify(jsonExemple, null, 2) }</textarea>
+                    </div>
+
+                    <div>
+                        <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-800 dark:text-white">Minified JSON data</label>
+                        <textarea id="message" rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >{JSON.stringify(jsonExemple)}</textarea>
+                    </div>
+                </div>
+            </div>
 
             <div className="mt-5 mb-5">
-                <span className="text-4xl font-extrabold text-gray-800">About JSON Minifier</span>
+                <span className="text-4xl font-extrabold text-gray-800">About this tool</span>
                 <br/>
                 <span>
-                    Compress JSON data swiftly with our user-friendly tool. No downloads, no fuss. Insert Json content and get your optimized file instantly. Simplify data handling for quicker sharing and efficient storage. Try it now for seamless JSON compression.
+                    Compress JSON data swiftly with our user-friendly tool. No downloads, no fuss. Insert Json content and get your optimized file instantly. Simplify data handling for quicker sharing and efficient storage. Use our JSON minifier online tool and experience seamless JSON compression.
                 </span>
             </div>
 
