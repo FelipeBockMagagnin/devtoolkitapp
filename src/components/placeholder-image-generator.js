@@ -54,7 +54,7 @@ export default function PlaceholderImageGenerator() {
     const menus = [
         {
             title: 'What is a Placeholder Image Generator?',
-            text: 'A Placeholder Image Generator creates temporary images to fill spaces in design projects, aiding in visualizing layouts before finalizing actual graphics.'
+            text: 'A Placeholder Image Generator tool creates temporary images with diferent sizes to fill spaces in design projects, aiding in visualizing layouts before finalizing actual graphics.'
         },
         {
             title: 'How does the Generator work?',
@@ -70,7 +70,7 @@ export default function PlaceholderImageGenerator() {
         },
         {
             title: 'Can I use the generated images commercially?',
-            text: 'Certainly! Our Placeholder Image Generator offers copyright-free images, making them suitable for both personal and commercial design endeavors.'
+            text: 'Certainly! Our tool offers copyright-free images, making them suitable for both personal and commercial design endeavors.'
         }
     ]
 
@@ -98,10 +98,10 @@ export default function PlaceholderImageGenerator() {
             <Image src={img} alt='place holder image' width={widthGenerated} height={heightGenerated} />
 
             <div className="mt-5 mb-5">
-                <span className=" text-4xl tracking-tight font-extrabold text-gray-800 mb-2">About Placeholder Image Generator</span>
+                <span className=" text-4xl tracking-tight font-extrabold text-gray-800 mb-2">About this tool</span>
                 <br/>
                 <span>
-                    Your go-to free online tool to effortlessly create placeholders. Tailor images to your needs with custom sizes for web and app design. Just set your specifications, click &apos;Generate&apos; and download your dynamic dummy image instantly. Simplify your workflow with our efficient and user-friendly Dynamic Dummy Image Generator, making design mock-ups a breeze.                
+                    Your go-to free online tool to effortlessly create placeholders with custom width and height. Tailor images to your needs with custom sizes for web and app design. Just set your specifications, click &apos;Generate&apos; and download your dynamic dummy image instantly. Simplify your workflow with our efficient and user-friendly Dynamic Dummy Image Generator, making design mock-ups a breeze.                
                 </span>
             </div>
 
