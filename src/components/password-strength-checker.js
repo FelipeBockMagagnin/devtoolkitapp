@@ -3,12 +3,36 @@
 import Title from "@/components/Title";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Faq from "./Faq";
 
 export default function PasswordStrengthChecker() {
     const [password, setPassword] = useState('')
 
     const [ seconds, setSeconds] = useState(0);
     const [ time, setTime] = useState(0);
+
+    const menus = [
+        {
+            title: '1. What is a Password Strength Checker Tool?',
+            text: 'A Password Strength Checker Tool is a utility designed to evaluate the security level of passwords based on various criteria such as length, complexity, and uniqueness.'
+        },
+        {
+            title: '2. How does a Password Strength Checker Tool work?',
+            text: 'A Password Strength Checker Tool analyzes passwords entered by users and provides feedback on their strength, highlighting weaknesses and suggesting improvements to enhance security.'
+        },
+        {
+            title: '3. Why should I use a Password Strength Checker Tool?',
+            text: 'Using a Password Strength Checker Tool helps users create robust passwords that are resistant to hacking attempts, reducing the risk of unauthorized access to sensitive accounts and data.'
+        },
+        {
+            title: '4. What criteria does a Password Strength Checker Tool consider when assessing password strength?',
+            text: 'This tool consider factors such as length, character variety (uppercase, lowercase, numbers, symbols), avoidance of common words or patterns, and uniqueness compared to previously used passwords.'
+        },
+        {
+            title: '5. Can a Password Strength Checker Tool guarantee absolute security for my passwords?',
+            text: 'While Password Strength Checker Tools provide valuable insights, no tool can guarantee absolute security. It\'s essential for users to follow best practices like using unique, complex passwords and enabling additional security measures like two-factor authentication.'
+        }
+    ]
 
     function test(password) {
         console.log(password)
@@ -40,6 +64,16 @@ export default function PasswordStrengthChecker() {
                     {getStrongValue(seconds)}
                 </div> : ''}
             </div>
+
+            <div className="mt-5 mb-5">
+            <span className="text-4xl font-extrabold text-gray-800">About this Tool</span>
+            <br />
+            <span>
+                Our tool evaluates password security by analyzing length, complexity, and uniqueness. Enhance account protection with our user-friendly password assessment tool for robust online security.
+            </span>
+         </div>
+
+         <Faq menus={menus} />
         </>
     )
 

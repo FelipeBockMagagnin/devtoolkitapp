@@ -4,12 +4,43 @@ import Title from "@/components/Title";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FiClipboard } from 'react-icons/fi';
-
+import Faq from "./Faq";
 
 export default function ImageToBase64() {
     const [img, setImg] = useState('')
     const [ base64, setBase64 ] = useState('')
     const [ error, setError] = useState('')
+
+    const menus = [
+        {
+            title: '1. What is an Image to Base64 Converter?',
+            text: 'An Image to Base64 Converter is an online tool that transforms images into Base64 encoded strings, allowing easy embedding of images directly into HTML, CSS, or JavaScript code.'
+        },
+        {
+            title: '2. How does an Image to Base64 Converter work?',
+            text: 'An Image to Base64 Converter encodes images into Base64 format, which represents binary data as ASCII characters. This encoded string can then be used within web applications, eliminating the need for separate image files.'
+        },
+        {
+            title: '3. What are the advantages of using an Image to Base64 Converter?',
+            text: 'Using an Image to Base64 Converter offers several advantages:<br/><br/><b>Simplified file management:</b> Embedding images directly into code reduces the need for additional image files.<br/><br/><b>Faster loading times:</b> Base64 encoded images can be loaded with the rest of the page content, reducing HTTP requests and improving performance.<br/><br/><b>Enhanced security:</b> Base64 encoded images can be included inline within code, minimizing the risk of external resource manipulation.'
+        },
+        {
+            title: '4. Can any type of image be converted to Base64 format?',
+            text: 'Yes, an Image to Base64 Converter can process various image formats including PNG, JPEG, GIF, and SVG, converting them into Base64 encoded strings.'
+        },
+        {
+            title: '5. Are there limitations to using Base64 encoded images?',
+            text: 'While Base64 encoded images offer benefits, they can also result in larger file sizes compared to binary image files. This can impact page load times and increase bandwidth usage, particularly for large or high-resolution images.'
+        },
+        {
+            title: '6. How can I use Base64 encoded images in my web projects?',
+            text: 'Base64 encoded images can be directly embedded into HTML documents using the <img> tag with the src attribute set to the Base64 string. They can also be utilized within CSS files for background images or within JavaScript for dynamic image loading.'
+        },
+        {
+            title: '7. Is the use of Base64 encoded images recommended for all web projects?',
+            text: 'The decision to use Base64 encoded images depends on specific project requirements and performance considerations. While Base64 encoding offers advantages in certain scenarios, it\'s essential to weigh the trade-offs in terms of file size, caching, and page load times before implementation.'
+        }
+    ]
 
     useEffect(() => {
         generate()
@@ -87,6 +118,16 @@ export default function ImageToBase64() {
                     <textarea disabled value={"<img src='" + base64 + "'/>"} id="message" rows="6" className="h-64 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ></textarea>
                 </div> : ''}
             </div>
+
+            <div className="mt-5 mb-5">
+                <span className="text-4xl font-extrabold text-gray-800">About this Tool</span>
+                <br/>
+                <span>
+                    Our tool converts images to Base64 strings, facilitating seamless integration into web projects. Simplify image management and enhance loading speed effortlessly with our converter.                
+                </span>
+            </div>
+
+            <Faq menus={menus}/>
         </>
     )
 }
